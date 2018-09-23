@@ -1,0 +1,12 @@
+\documentclass{standalone}
+\usepackage{circuitikz}
+\usepackage{amsmath, amssymb}
+\begin{document}
+	\begin{circuitikz}
+		\draw (0,0) node[ground] {} to[sV] (2,0)
+			to[R] (4,0) -- (5,0) -- (5,0.5) to[pC] (7,0.5) -- (7,0) -- (8,0) node[ground] {};
+		\draw (5,0) -- (5,-0.5) to[L] (7,-0.5) -- (7,0);
+		\filldraw (2,0) circle [radius=0.05] node[above] {$ V_{\text{in}} $};
+		\filldraw (5,0) circle [radius=0.05] node[above left] {$ V_{\text{out}} $};
+	\end{circuitikz}
+\end{document}
