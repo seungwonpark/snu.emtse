@@ -1,0 +1,12 @@
+\documentclass{standalone}
+\usepackage{circuitikz}
+\usepackage{amsmath, amssymb}
+\begin{document}
+	\begin{circuitikz}
+		\draw (0,0.75) node[ground] {} to[sV] (2,0.75);
+		\draw (2,0.75) -- (2,1.5) to[R=$ R_{1} $] (4,1.5) to[vR=$ R_{2} $] (6,1.5) -- (6,0.75);
+		\draw (2,0.75) -- (2,0)  to[R=$ R_{3} $] (4,0) to[R=$ R_{x} $] (6,0) -- (6,0.75);
+		\draw (4,1.5) to[voltmeter] (4,0);
+		\draw (6,0.75) -- (7,0.75) node[ground] {};
+	\end{circuitikz}
+\end{document}
