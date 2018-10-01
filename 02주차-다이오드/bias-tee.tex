@@ -1,0 +1,12 @@
+\documentclass{standalone}
+\usepackage{circuitikz}
+\usepackage{amsmath, amssymb}
+\usepackage{siunitx}
+\begin{document}
+	\begin{circuitikz}
+		\draw (-4,2) node[ground] {} to[battery, invert] (-2,2)
+			to[L] (0,2) to[pC] (2,2) to[sV] (4,2) node[ground] {};
+		\filldraw (2,2) circle [radius=0.05] node[above] {$ V_{\text{in}} $};
+		\filldraw (0,2) circle [radius=0.05] node[above] {$ V_{\text{out}} $};
+	\end{circuitikz}
+\end{document}
