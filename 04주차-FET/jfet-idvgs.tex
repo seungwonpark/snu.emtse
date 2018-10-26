@@ -1,0 +1,16 @@
+\documentclass{standalone}
+\usepackage{circuitikz}
+\usepackage{amsmath, amssymb}
+\begin{document}
+	\begin{circuitikz}
+		\draw (0,0) node[njfet, rotate=-90](njfet) {};
+%		\draw (0,0.25) circle [radius=0.7];
+		\draw (njfet.C) to[R, l=$ R_{\rm D} $, i^<=$ I_{\rm D} $] (3.5,0) to[battery1, l=$ V_{\rm DD} $] (5,0) node[ground] {};
+		\draw (njfet.E) -- (-3, 0) node[ground] {};
+		\draw (njfet.B) -- ++(0,1) to[R, a=$ R_{\rm G} $] ++(-2,0) to[sV] ++(-2,0) node[ground] {};
+		
+		\filldraw (njfet.B) + (-2,1) circle [radius=0.05] node[above] {$ V_{\text{in}} $};
+		\filldraw (njfet.B) + (0,1) circle [radius=0.05] node[above] {$ V_{\text{GS}} $};
+		\filldraw (1,0) circle [radius=0.05] node[above] {$ V_{\text{DS}} $};
+	\end{circuitikz}
+\end{document}
