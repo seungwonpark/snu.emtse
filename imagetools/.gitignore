@@ -1,2 +1,4 @@
-source/
-result/
+source/*.PNG
+result/*.PNG
+!source/TEK00070.PNG
+!result/neg-TEK00070.PNG
